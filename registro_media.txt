@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+    char xnome[40], xsobrenome[50], xsobrenome2[50];
+    float media, nota[4];
+    printf("*************************** \n");
+    printf("Programa de média bimestral \n");
+    printf("*************************** \n");
+    printf("Insira o Nome: ");
+    fflush(stdin);
+    fgets(xnome,40,stdin);
+    xnome[strlen(xnome) - 1] = '\0';
+    printf("Insira o Primeiro Sobrenome: ");
+    fflush(stdin);
+fgets(xsobrenome,50,stdin);
+xsobrenome[strlen(xsobrenome) - 1] = '\0';
+    printf("Insira o Segundo Sobrenome: ");
+    fflush(stdin);
+fgets(xsobrenome2,50,stdin);
+xsobrenome2[strlen(xsobrenome2) - 1] = '\0';
+    printf("Insira a Primeira Nota: ");
+    scanf("%f",&nota[0]);
+    printf("Insira a Segunda Nota: ");
+    scanf("%f",&nota[1]);
+    printf("Insira a Terceira Nota: ");
+    scanf("%f",&nota[2]);
+    printf("Insira a Quarta Nota: ");
+    scanf("%f",&nota[3]);
+    media = (nota[0]+nota[1]+nota[2]+nota[3])/4;
+    printf("Nome: %s %s %s \n", xnome, xsobrenome, xsobrenome2);
+    printf("Média: %.2f \n", media);  
+    system("pause");
+    return 0;   
+}
